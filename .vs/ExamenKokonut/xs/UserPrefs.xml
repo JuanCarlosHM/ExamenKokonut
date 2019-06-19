@@ -29,5 +29,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.ExamenKokonut.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.89D0BCE0-301A-439F-B271-F44DB5736B55" />
-  <MonoDevelop.Ide.ItemProperties.ExamenKokonut.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault" PreferredExecutionTarget="Android.SDJ7N18A12001421" />
+  <MonoDevelop.Ide.ItemProperties.ExamenKokonut.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
 </Properties>
