@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ExamenKokonut.App"
+    xmlns:infra="clr-namespace:ExamenKokonut.Infraestructure">
+    
+    
+    <Application.Resources>
+        <!-- Diccionario de recursos -->
+        <ResourceDictionary>
+            <infra:InstanceLocator x:Key="Locator"/>
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

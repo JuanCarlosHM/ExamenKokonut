@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ExamenKokonut.View.LogInPage"
+    BindingContext=" {Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        
+        <StackLayout
+            Margin="10, 50"
+            BindingContext="{Binding LogIn}">
+            
+            
+            <Image></Image>
+            <Label
+                Text="Por favor ingresa tus datos:"
+            ></Label>
+            
+            <Entry
+                Placeholder="Usuario o correo electronico"
+                Text="{Binding Email, Mode=TwoWay}"
+            ></Entry>
+            
+            <Entry
+                IsPassword="true"
+                Placeholder="Contraseña"
+                Text="{Binding Password, Mode=TwoWay}"  
+            ></Entry>
+                       
+            <Button
+                Text="Iniciar Sesión"
+                Command="{Binding LogInCommand}"
+            ></Button>
+            
+            <Label
+                Text="¿Olvidaste tu contraseña?"
+            ></Label>
+            
+            <Label
+                Text="Registrate"
+            ></Label>
+            
+         
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
