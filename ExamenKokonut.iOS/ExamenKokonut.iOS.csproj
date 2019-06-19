@@ -126,6 +126,18 @@
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\splash1125.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\1242spp.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\1242sp.png" />
+    <ImageAsset Include="Assets.xcassets\kokolog.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\kokolog.imageset\kokolog.png" />
+    <ImageAsset Include="Assets.xcassets\kokolog.imageset\kokolog-1.png" />
+    <ImageAsset Include="Assets.xcassets\kokolog.imageset\kokolog-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_home.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_home.imageset\ic_home.png" />
+    <ImageAsset Include="Assets.xcassets\ic_home.imageset\ic_home-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_home.imageset\ic_home-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person_outline.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_person_outline.imageset\ic_person_outline.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person_outline.imageset\ic_person_outline-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person_outline.imageset\ic_person_outline-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -176,5 +188,11 @@
     <Folder Include="Assets.xcassets\ic_favorite.imageset\" />
     <Folder Include="Implementations\" />
     <Folder Include="Assets.xcassets\LaunchImage.imageset\" />
+    <Folder Include="Assets.xcassets\kokolog.imageset\" />
+    <Folder Include="Assets.xcassets\ic_home.imageset\" />
+    <Folder Include="Assets.xcassets\ic_person_outline.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\kokolog.png" />
   </ItemGroup>
 </Project>

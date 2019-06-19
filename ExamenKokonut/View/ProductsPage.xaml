@@ -5,6 +5,7 @@
              xmlns:controls="clr-namespace:ExamenKokonut.Controls" 
              BindingContext="{Binding Main, Source={StaticResource Locator}}" 
              BackgroundColor="#f1f1f2" 
+             Icon="ic_person_outline"
              Title="Artículos">
     
     <ContentPage.Content>

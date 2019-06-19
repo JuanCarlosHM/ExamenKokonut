@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{937175B0-5565-4DCF-9C2B-96F92A4D641F}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ExamenKokonut" expanded="True">
+            <Node name="ExamenKokonut" expanded="True" selected="True">
+              <Node name="View" expanded="True" />
+            </Node>
+            <Node name="ExamenKokonut.Android" expanded="True">
+              <Node name="Assets" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="drawable-hdpi" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="ExamenKokonut.iOS" expanded="True">
+              <Node name="Implementations" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ExamenKokonut.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.89D0BCE0-301A-439F-B271-F44DB5736B55" />
+  <MonoDevelop.Ide.ItemProperties.ExamenKokonut.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault" PreferredExecutionTarget="Android.SDJ7N18A12001421" />
+</Properties>

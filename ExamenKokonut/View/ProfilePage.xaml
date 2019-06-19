@@ -5,6 +5,7 @@
     x:Class="ExamenKokonut.View.ProfilePage"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Icon="ic_home"
     Title="Perfil">
     
     <ContentPage.Content>
@@ -54,7 +55,7 @@
                     </Label>
                     <Label
                         FontSize="Small"
-                        Margin="10, 0" 
+                        Margin="20, 0" 
                         Text="{Binding LastName}"/>
                    </StackLayout>
          
