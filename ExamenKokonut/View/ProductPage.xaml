@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ExamenKokonut.View.ProductPage" 
+             xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton" 
+             BindingContext="{Binding Main, Source={StaticResource Locator}}" >
+    <ContentPage.Content>
+        <AbsoluteLayout BindingContext="{Binding Product}">
+            
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <Grid>
+                    <Image 
+                    Aspect="AspectFill"     
+                    HeightRequest="200"    
+                    HorizontalOptions="Fill" 
+                    Source="weAreKoko"
+                    VerticalOptions="Start" 
+                    x:Name="imgCard"/>
+                    
+                    <ScrollView Scrolled="ScrollView_Scrolled">
+                        <Grid 
+                            BackgroundColor="White"
+                            HorizontalOptions="Fill" 
+                            VerticalOptions="Start" 
+                            x:Name="grdContentArea" >
+                            
+                            <StackLayout 
+                                HorizontalOptions="Fill" 
+                                VerticalOptions="Start"
+                                Padding="10">
+                                
+                                <Label 
+                                FontSize="Large"    
+                                FontAttributes="Bold"
+                                Opacity="1" 
+                                Text= "{Binding Product.Title}" 
+                                />
+                                <Label 
+                                    Opacity="0.6"
+                                    Text="{Binding Product.Body}" >
+                                  
+                                </Label>
+                                
+                            </StackLayout>
+                        </Grid>
+                    </ScrollView>
+                </Grid>
+            </StackLayout>
+            
+           <!-- Color de boton por defecto:  BackgroundColor ="#FFB300"--> 
+          <Button 
+         AbsoluteLayout.LayoutFlags="XProportional"
+         AbsoluteLayout.LayoutBounds="0.9, 175, 60,60"
+         BorderRadius="30" 
+         BackgroundColor="{Binding ButtonColor, Mode=TwoWay}"       
+         Command="{Binding FabButtonCommand}"
+         Clicked="Fab_Clicked"
+         HeightRequest="60" 
+         ImageSource="ic_favorite" 
+         WidthRequest="60" 
+         x:Name="imgFloatButton"/> 
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

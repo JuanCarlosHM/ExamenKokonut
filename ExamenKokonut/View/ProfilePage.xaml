@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ExamenKokonut.View.ProfilePage"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Icon="ic_home"
+    Title="Perfil">
+    
+    <ContentPage.Content>
+        <Grid BindingContext="{Binding Profile}"
+                        VerticalOptions="FillAndExpand">
+            
+             <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="*"/>
+                                
+    
+                
+             </Grid.RowDefinitions>
+            
+            <Grid
+                Margin="10, 20"
+                Grid.Row="0">
+              
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+              
+                    
+                   <controls:CircleImage
+                    Grid.Column="0"
+                    Grid.Row="0"    
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="koko_profile"
+                    WidthRequest="100">
+                    </controls:CircleImage>
+                    
+                    <StackLayout
+                        Grid.Column="1">
+                  
+                    
+                    <Label
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Margin="20, 5" 
+                        Text="{Binding Name}"
+                        >
+                    </Label>
+                    <Label
+                        FontSize="Small"
+                        Margin="20, 0" 
+                        Text="{Binding LastName}"/>
+                   </StackLayout>
+         
+            </Grid>  
+            
+             <Grid
+                VerticalOptions="Start"
+                Grid.Row="1">
+                
+              
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                
+                    <Image 
+                    Grid.Column="0"
+                    HorizontalOptions="End" 
+                    Source="ic_mail_outline"
+                    VerticalOptions="Center">
+                    </Image>
+                
+                    <Image 
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="End" 
+                    Source="ic_date_range"
+                    VerticalOptions="Center">
+                    </Image>
+                
+                    <Label
+                    Grid.Column="1"
+                    Text="{Binding Email}"
+                    VerticalTextAlignment="Center"/>
+                
+                    <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Text="{Binding Date}"
+                    VerticalTextAlignment="Center"/>
+
+            </Grid>
+            
+            <Grid
+                Grid.Row="2">    
+
+                <Label
+                    Margin="15"
+                    FontSize="Large"
+                    Text="Favoritos"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center">
+                </Label>
+                    <Button 
+                    Text="Actualizar"
+                    Margin="10"
+                    BackgroundColor="Transparent"
+                    Grid.Column="1"
+                    HorizontalOptions="End"
+                    HeightRequest="60"
+                    VerticalOptions="Center"
+                    Command="{Binding Refresh}">
+                </Button>
+                
+            </Grid>
+         
+                <ListView
+                    Grid.Row="3"
+                    HasUnevenRows="true"
+                    ItemsSource="{Binding Favorites}">
+                  <ListView.ItemTemplate>
+                  <DataTemplate>
+                        <ViewCell>
+                        <StackLayout 
+                            Grid.Column="1"
+                            VerticalOptions="Center">
+                            <Label 
+                                Margin="15,5"    
+                                FontAttributes="Bold"
+                                FontSize="Small" 
+                                Text="{Binding Title}"
+                                TextColor="Black">
+                            </Label>
+                        </StackLayout>
+                        </ViewCell>
+                  </DataTemplate>
+                 </ListView.ItemTemplate>
+
+                </ListView>
+            
+
+          <Grid VerticalOptions="EndAndExpand"
+                Margin="0, 15"
+                Grid.Row="4">
+                
+             <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            
+                <Image 
+                Grid.Column="0"
+                HorizontalOptions="End" 
+                HeightRequest="60"    
+                Source="ic_power_settings_new"
+                VerticalOptions="Center">
+                    
+                <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogOutCommand}"/>
+                </Image.GestureRecognizers>
+                </Image>
+                
+                 <Label
+                    FontSize="Medium"
+                    Grid.Column="1"
+                    Text="Salir"
+                    VerticalTextAlignment="Center"/>
+                
+           </Grid>      
+          
+                
+            
+            
+            
+            
+
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ExamenKokonut.View.ProductsPage" 
+             xmlns:controls="clr-namespace:ExamenKokonut.Controls" 
+             BindingContext="{Binding Main, Source={StaticResource Locator}}" 
+             BackgroundColor="#f1f1f2" 
+             Icon="ic_person_outline"
+             Title="Artículos">
+    
+    <ContentPage.Content>
+        <StackLayout 
+            BindingContext="{Binding Products}">
+            
+            <!-- Si deseamos refrescar la lista agregar: -->
+            <!-- IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}" -->
+            <!-- IsPullToRefreshEnabled="true" -->
+            <!-- RefreshCommand="{Binding RefreshCommand}" -->
+            
+            <ListView 
+                HasUnevenRows="true"
+                ItemsSource="{Binding Products}" 
+                SeparatorVisibility="None"
+                >
+                
+                
+                <!-- ImgCard="{Binding ImageUrl}"
+                     No tenemos datos de vuelta -->
+               
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                            <controls:CardView
+                                Title="{Binding Title}"
+                                ShortDescript=""
+                                ButtonTitle="{Binding Slug}"
+                                ButtonActionOne="VER MÁS"
+                                ButtonActionTwo=""
+                                >
+                                
+                                <controls:CardView.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectProductCommand}"/>
+                                </controls:CardView.GestureRecognizers>
+                               
+                                    
+                            </controls:CardView>
+                        
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
